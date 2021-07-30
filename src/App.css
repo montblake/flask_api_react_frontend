@@ -15,7 +15,7 @@ header {
 }
 
 main {
-  background: rgb(42, 89, 118);
+  background: rgb(51, 79, 96);
   padding: 20px 80px;
 }
 
@@ -108,4 +108,10 @@ button {
   padding: 4px 8px;
   background: rgb(227, 218, 189);
   margin-right: 16px;
+}
+
+
+.list_title {
+  color: rgb(227, 218, 189);
+  margin-bottom: 12px;
 }

@@ -9,15 +9,16 @@ function Episode(props) {
     }
 
     function fullEp() {
+
         return (
             <div className="episode_full">
                 <button onClick={handleClick} className="episode_closer">CLOSE</button>
                 <h4>{props.title}</h4>
+                <p>{props.episode_id}</p>
                 <h5>written by {props.writer}</h5>
                 <p>{props.plot}</p>
-                { props.currentUser.username == props.writer ?<UserControls /> : "" }
+                { props.currentUser.username === props.writer ?<UserControls episode_id={props.episode_id} deleteEpisode={props.deleteEpisode}/> : "" }
                     
-                
             </div>
         )
     }
