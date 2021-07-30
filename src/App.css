@@ -1,5 +1,7 @@
 *, *:before, *:after {
   margin: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .App {
@@ -13,7 +15,7 @@ header {
 }
 
 main {
-  background: rgb(72, 108, 130);
+  background: rgb(42, 89, 118);
   padding: 20px 80px;
 }
 
@@ -33,7 +35,7 @@ p {
 }
 
 footer {
-  background:rgb(79, 58, 6);
+  background:rgb(126, 77, 24);
   padding: 20px 80px;
 }
 
@@ -45,14 +47,6 @@ span {
   padding: 20px 80px;
 }
 
-.sub-footer {
-  height: 100px;
-  width: 100%;
-  background: rgb(206, 108, 2);
-  position:absolute;
-  bottom:0;
-  left: 0;
-}
 .episode {
   color: rgb(206, 108, 2);
   margin-bottom: 24px;
@@ -60,3 +54,58 @@ span {
   padding-left: 8px;
 }
 
+a {
+  color: rgb(227, 218, 189);
+  text-decoration: none;
+}
+
+.episode_link {
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+
+.episode_link:hover {
+  cursor: pointer;
+}
+
+.episode_link span {
+  text-transform: none;
+  font-style: italic;
+  margin-left: 8px;
+}
+
+.episode_link > h4 {
+  display: inline;
+}
+
+.episode_full {
+  background: rgba(227, 218, 189, .5);
+  padding: 24px;
+  margin: 16px 0;
+}
+
+.episode_full > h4, h5 {
+  color: rgb(126, 77, 24);
+  font-size: 24px;
+}
+
+.episode_full > h5 {
+  color: rgb(126, 77, 24);
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.episode_closer {
+  margin: 0 0 24px 0;
+}
+
+.user_controls {
+  margin: 24px 0 0 0;
+}
+
+button {
+  padding: 4px 8px;
+  background: rgb(227, 218, 189);
+  margin-right: 16px;
+}

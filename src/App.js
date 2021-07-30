@@ -4,19 +4,13 @@ import Episode from './components/Episode';
 
 
 function App() {
-  // const URL="http://localhost:5000/";
-  const URL="https://flask-detective-api-backend.herokuapp.com/";
+  const URL="http://localhost:5000/";
+  // const URL="https://flask-detective-api-backend.herokuapp.com/";
 
-  const [message, setMessage] = useState({text: 'nothing', author: 'none'})
+
   const [episodes, setEpisodes] = useState([{title:"heyooo!", plot:"whaaat?!!"}])
 
-
-  async function getMessages() {
-    const response = await fetch(URL);
-    const data = await response.json();
-    console.log(data);
-    setMessage(data);
-  }
+  const [ currentUser, setCurrentUser] = useState({username: "Blake"})
 
   async function getEpisodes() {
     const response = await fetch(URL + 'episodes')
@@ -27,13 +21,9 @@ function App() {
 
   const renderEpisodes = () => {
     return episodes.map(epi => (
-      <Episode title={epi.title} plot={epi.plot} writer={epi.writer} key={epi.id} />
+      <Episode title={epi.title} plot={epi.plot} writer={epi.writer} key={epi.episode_id} currentUser={currentUser}/>
     ));
   }
-
-  useEffect(() => {
-    getMessages()
-  }, [])
 
   useEffect(() => {
     getEpisodes()
@@ -49,14 +39,10 @@ function App() {
         <p>Dat zijn ook makelaars in koffie, doch hun adres behoeft ge niet te weten. Ik pas er dus wel op, dat ik geen romans schrijf, of andere valse opgaven doe. <span>Ik heb dan ook </span>altijd opgemerkt dat mensen die zich met zoiets inlaten, gewoonlijk slecht wegkomen. Ik ben drieënveertig jaar oud, bezoek sedert twintig jaren de beurs, en kan dus voor de dag treden, als men iemand roept die ondervinding heeft. Ik heb al wat huizen zien <span>vallen!</span> En gewoonlijk, wanneer ik de oorzaken naging, kwam het me voor, dat die moesten gezocht worden in de verkeerde richting die aan de meesten gegeven was in hun jeugd.</p>
       </main>
       <footer>
+      <h2>Episodes</h2>
       { renderEpisodes() }
       </footer>
 
-      
-
-        <div className="sub-footer">
-          <p>Hello.</p>
-        </div>
     </div>
   );
 }
