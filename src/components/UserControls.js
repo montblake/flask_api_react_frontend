@@ -4,7 +4,6 @@ function UserControls(props){
     }
 
     async function handleDelete() {
-        console.log(props.episode_id)
         props.deleteEpisode(props.episode_id);
     }
     

@@ -2,6 +2,7 @@
   margin: 0;
   list-style: none;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .App {
@@ -11,12 +12,12 @@
 
 header {
   background: darkgoldenrod;
-  padding: 20px 80px;
+  padding: 30px 80px;
 }
 
 main {
   background: rgb(51, 79, 96);
-  padding: 20px 80px;
+  padding: 30px 80px;
 }
 
 h2, h3, h4, h5, h6 {
@@ -36,7 +37,7 @@ p {
 
 footer {
   background:rgb(126, 77, 24);
-  padding: 20px 80px;
+  padding: 30px 80px;
 }
 
 span {
@@ -114,4 +115,36 @@ button {
 .list_title {
   color: rgb(227, 218, 189);
   margin-bottom: 12px;
+}
+
+.main_title,
+.list_title,
+.contribute_title {
+  margin-bottom: 12px;
+}
+
+.episodeCreator {
+  padding: 30px 80px;
+}
+
+.episodeCreator h5 {
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.episodeForm > input {
+  width: 100%;
+  padding: 4px;
+}
+
+.episodeForm > input[type="submit"] {
+  width: 25%;
+  margin: 12px 0;
+}
+
+.episodeForm > textarea {
+  width: 100%;
+  min-height: 160px;
+  padding: 4px;
+  resize: vertical;
 }
