@@ -1,38 +1,62 @@
+*, *:before, *:after {
+  margin: 0;
+}
+
 .App {
-  text-align: center;
+  background: rgb(227, 218, 189);
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  background: darkgoldenrod;
+  padding: 20px 80px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+  background: rgb(72, 108, 130);
+  padding: 20px 80px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h2, h3, h4, h5, h6 {
+  color:darkgoldenrod;
+  margin: 0;
+  text-transform: capitalize;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  color: rgb(227, 218, 189);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p {
+  color: rgb(227, 218, 189);
+  font-size: 14px;
 }
+
+footer {
+  background:rgb(79, 58, 6);
+  padding: 20px 80px;
+}
+
+span {
+  color: rgb(140, 206, 246);
+}
+
+.epi-viewer {
+  padding: 20px 80px;
+}
+
+.sub-footer {
+  height: 100px;
+  width: 100%;
+  background: rgb(206, 108, 2);
+  position:absolute;
+  bottom:0;
+  left: 0;
+}
+.episode {
+  color: rgb(206, 108, 2);
+  margin-bottom: 24px;
+  border-left: 1px solid rgb(227, 218, 189);
+  padding-left: 8px;
+}
+
