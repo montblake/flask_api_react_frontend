@@ -5,12 +5,11 @@ function LoginForm(props){
 
     function handleSubmit(event){
         event.preventDefault();
-        console.log(loginForm)
         props.login(loginForm);
+        setLoginForm({username: "", password: "", remember_me: false});
     }
 
     function handleChange(event) {
-        console.log(event.target.name);
         setLoginForm(prevState => ({
           ...prevState,
           [event.target.name] : event.target.value
@@ -18,7 +17,6 @@ function LoginForm(props){
       }
 
       function handleCheckbox(event) {
-          console.log(event.target.name);
           const newBool = !(loginForm.remember_me)
           setLoginForm(prevState => ({
               ...prevState,

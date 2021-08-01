@@ -3,29 +3,33 @@ import { useState, useEffect } from "react";
 import Episode from './components/Episode';
 import EpisodeForm from './components/EpisodeForm';
 import LoginForm from './components/LoginForm';
-
+import Dashboard from './components/Dashboard';
+import Header from './components/Header';
+import Episodes from './components/Episodes'
+import Home from './components/Home';
+import Writers from './components/Writers';
 
 function App() {
   const URL="http://localhost:5000/";
   // const URL="https://flask-detective-api-backend.herokuapp.com/";
 
 
-  const [episodes, setEpisodes] = useState([{title:"heyooo!", plot:"whaaat?!!"}])
-
+  const [episodes, setEpisodes] = useState([])
   const [ currentUser, setCurrentUser] = useState({username: "", user_id: null})
 
   async function getEpisodes() {
     const response = await fetch(URL + 'episodes')
     const data = await response.json();
     console.log(data);
-    setEpisodes(data);
+    setEpisodes(data.episodes);
+    if (data.current_user) setCurrentUser({username: data.current_user, user_id: data.user_id})
   }
 
-  const renderEpisodes = () => {
-    return episodes.map(epi => (
-      <Episode title={epi.title} plot={epi.plot} writer={epi.writer} episode_id={epi.episode_id} key={epi.episode_id} currentUser={currentUser} deleteEpisode={deleteEpisode}/>
-    ));
-  }
+  // const renderEpisodes = () => {
+  //   return episodes.map(epi => (
+  //     <Episode title={epi.title} plot={epi.plot} writer={epi.writer} episode_id={epi.episode_id} key={epi.episode_id} currentUser={currentUser} deleteEpisode={deleteEpisode}/>
+  //   ));
+  // }
 
   const deleteEpisode = async (id) => {
     await fetch(URL + 'episodes/' + id +'/delete', {
@@ -63,6 +67,17 @@ function App() {
     setCurrentUser({username: data.username, user_id: data.user_id})
   }
 
+  async function logout(){
+    const response = await fetch(URL + 'logout');
+    const data = await response.json();
+    console.log(data);
+    setCurrentUser({username: data.username, user_id: data.user_id})
+  }
+
+  async function register(){
+    console.log('I am registering.')
+  }
+
 
   useEffect(() => {
     getEpisodes()
@@ -70,24 +85,8 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-        <h1>Django and Flask</h1>
-        <p>Hello, {currentUser.username}</p>
-      </header>
-      { (currentUser.user_id !== null) ? 
-        <EpisodeForm currentUser={currentUser} createEpisode={createEpisode} />
-        :
-        <LoginForm login={login} />
-      }
-      <main>
-        <h2 className="main_title">A Crowd-Sourced Detective Series</h2>
-        <p>Dat zijn ook makelaars in koffie, doch hun adres behoeft ge niet te weten. Ik pas er dus wel op, dat ik geen romans schrijf, of andere valse opgaven doe. <span>Ik heb dan ook </span>altijd opgemerkt dat mensen die zich met zoiets inlaten, gewoonlijk slecht wegkomen. Ik ben drieënveertig jaar oud, bezoek sedert twintig jaren de beurs, en kan dus voor de dag treden, als men iemand roept die ondervinding heeft. Ik heb al wat huizen zien <span>vallen!</span> En gewoonlijk, wanneer ik de oorzaken naging, kwam het me voor, dat die moesten gezocht worden in de verkeerde richting die aan de meesten gegeven was in hun jeugd.</p>
-      </main>
-      <footer>
-      <h2 className="list_title">Episodes</h2>
-      { renderEpisodes() }
-      </footer>
-
+     <Header currentUser={currentUser.username} user_id={currentUser.id} register={register} login={login}/>
+      <Episodes getEpisodes={getEpisodes} episodes={episodes} currentUser={currentUser} deleteEpisode={deleteEpisode}/>
     </div>
   );
 }
