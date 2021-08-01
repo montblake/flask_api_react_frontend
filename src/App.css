@@ -148,3 +148,7 @@ button {
   padding: 4px;
   resize: vertical;
 }
+
+.guest-invitation p {
+  color: rgb(206, 108, 2);
+}

@@ -37,7 +37,7 @@ function EpisodeForm(props){
                 >
                     
                 </textarea>
-                <input type="submit" value="submit"/>
+                <input type="submit" value="submit episode"/>
             </form>
         </div> 
     )

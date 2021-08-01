@@ -2,6 +2,7 @@ import './App.css';
 import { useState, useEffect } from "react";
 import Episode from './components/Episode';
 import EpisodeForm from './components/EpisodeForm';
+import LoginForm from './components/LoginForm';
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
 
   const [episodes, setEpisodes] = useState([{title:"heyooo!", plot:"whaaat?!!"}])
 
-  const [ currentUser, setCurrentUser] = useState({username: "Blake", user_id: 1})
+  const [ currentUser, setCurrentUser] = useState({username: "", user_id: null})
 
   async function getEpisodes() {
     const response = await fetch(URL + 'episodes')
@@ -47,6 +48,22 @@ function App() {
     getEpisodes();
   }
 
+  async function login(form){
+    console.log('I am logging in!');
+    const response = await fetch(URL + 'login', {
+      method: "POST",
+      cache: "no-cache",
+      headers: new Headers({
+        "content-type": "application/json"
+      }),
+      body: JSON.stringify(form)
+    });
+    const data = await response.json();
+    console.log(data.username)
+    setCurrentUser({username: data.username, user_id: data.user_id})
+  }
+
+
   useEffect(() => {
     getEpisodes()
   }, [])
@@ -55,8 +72,13 @@ function App() {
     <div className="App">
       <header>
         <h1>Django and Flask</h1>
+        <p>Hello, {currentUser.username}</p>
       </header>
-      <EpisodeForm currentUser={currentUser} createEpisode={createEpisode}/>
+      { (currentUser.user_id !== null) ? 
+        <EpisodeForm currentUser={currentUser} createEpisode={createEpisode} />
+        :
+        <LoginForm login={login} />
+      }
       <main>
         <h2 className="main_title">A Crowd-Sourced Detective Series</h2>
         <p>Dat zijn ook makelaars in koffie, doch hun adres behoeft ge niet te weten. Ik pas er dus wel op, dat ik geen romans schrijf, of andere valse opgaven doe. <span>Ik heb dan ook </span>altijd opgemerkt dat mensen die zich met zoiets inlaten, gewoonlijk slecht wegkomen. Ik ben drieënveertig jaar oud, bezoek sedert twintig jaren de beurs, en kan dus voor de dag treden, als men iemand roept die ondervinding heeft. Ik heb al wat huizen zien <span>vallen!</span> En gewoonlijk, wanneer ik de oorzaken naging, kwam het me voor, dat die moesten gezocht worden in de verkeerde richting die aan de meesten gegeven was in hun jeugd.</p>
