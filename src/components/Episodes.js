@@ -12,10 +12,14 @@ function Episodes(props){
     return (
         <footer>
             <h2 className="list_title">Episodes</h2>
-            <h3>Add to the collection</h3>
+            { props.currentUser.username ? 
             <EpisodeForm currentUser={props.currentUser} createEpisode={props.createEpisode} />
-            <h3>Past contributions</h3>
-            { props.episodes  ? renderEpisodes() : props.getEpisodes() }
+            :
+            <></>
+            }
+            
+            <h3>Episode Collection</h3>
+            { props.episodes  ? renderEpisodes() : "Loading..." }
         </footer>
     )
 }

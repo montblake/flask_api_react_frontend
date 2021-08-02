@@ -1,17 +1,32 @@
 function Dashboard(props) {
+
+    function handleLogin(){
+        props.setShowLogin(true);
+        props.setShowRegistration(false);
+    }
+
+    function handleLogout(){
+        props.logout();
+    }
+
+    function handleRegistration(){
+        props.setShowRegistration(true);
+        props.setShowLogin(false);
+    }
+
     return (
         <div>
             <h2>Dashboard</h2>
             { props.currentUser ? 
             <nav>
-                <p>Hello, {props.currentUser.username}</p>
+                <span>Hello, {props.currentUser}</span>
                 <button>Edit Profile</button>
-                <button>Logout</button>
+                <button onClick={handleLogout}>Logout</button>
             </nav>
             :
             <nav>
-				<button>Login</button>
-				<button>Register</button>
+				<button onClick={handleLogin}>Login</button>
+				<button onClick={handleRegistration}>Register</button>
 			</nav>
         }
         </div>

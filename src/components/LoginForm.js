@@ -7,6 +7,7 @@ function LoginForm(props){
         event.preventDefault();
         props.login(loginForm);
         setLoginForm({username: "", password: "", remember_me: false});
+        props.setShowLogin(false);
     }
 
     function handleChange(event) {
@@ -21,12 +22,16 @@ function LoginForm(props){
           setLoginForm(prevState => ({
               ...prevState,
               remember_me : newBool
-
           }));
+      }
+
+      function showRegistrationForm(){
+          props.setShowRegistration(true);
+          props.setShowLogin(false);
       }
     
     return (
-        <div className="episodeCreator">
+        <div className="login">
             <h2 className="contribute_title">Login</h2>
             <form onSubmit={handleSubmit} className="episodeForm">
                 <input 
@@ -53,6 +58,7 @@ function LoginForm(props){
                 />
                 <input type="submit" value="submit information"/>
             </form>
+            <button onClick={showRegistrationForm}>Need to register for the app?</button>
         </div> 
     )
 }

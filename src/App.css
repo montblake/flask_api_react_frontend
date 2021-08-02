@@ -124,7 +124,9 @@ button {
 }
 
 .episodeCreator {
-  padding: 30px 80px;
+  padding: 20px 40px;
+  background: rgba(227, 218, 189, .75);
+  margin: 16px 0;
 }
 
 .episodeCreator h5 {
@@ -135,11 +137,13 @@ button {
 .episodeForm > input {
   width: 100%;
   padding: 4px;
+  background: rgb(227, 218, 189);
 }
 
 .episodeForm > input[type="submit"] {
   width: 25%;
   margin: 12px 0;
+  background: rgb(227, 218, 189);
 }
 
 .episodeForm > textarea {
@@ -147,8 +151,13 @@ button {
   min-height: 160px;
   padding: 4px;
   resize: vertical;
+  background: rgb(227, 218, 189);
 }
 
 .guest-invitation p {
   color: rgb(206, 108, 2);
+}
+
+.login {
+  margin: 30px 80px;
 }
