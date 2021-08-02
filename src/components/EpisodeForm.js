@@ -7,6 +7,7 @@ function EpisodeForm(props){
         event.preventDefault();
         console.log(episodeForm)
         props.createEpisode(episodeForm);
+        setEpisodeForm({title: "", plot: "", user_id: props.currentUser.user_id})
     }
 
     function handleChange(event) {

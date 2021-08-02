@@ -5,43 +5,90 @@
   box-sizing: border-box;
 }
 
-.App {
-  background: rgb(227, 218, 189);
-  height: 100vh;
+body {
+  background: black;
 }
 
 header {
-  background: darkgoldenrod;
-  padding: 30px 80px;
+  background-image: url('http://localhost:3000/images/alexandre-debieve-kjmf-eRkl2A-unsplash.jpg');
+  background-image: url('http://localhost:3000/images/sebastian-pociecha-M8NSkgzPMLY-unsplash.jpg');
+  /* background-image: url('http://localhost:3000/images/sebastian-pociecha-kGjbCVsHRbg-unsplash.jpg'); */
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  height: 33vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  position:fixed;
+  top: 0; left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+#home {
+  position: sticky;
+  top: 33vh; left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: darkcyan;
 }
 
 main {
-  background: rgb(51, 79, 96);
+  background: black;
   padding: 30px 80px;
 }
 
 h2, h3, h4, h5, h6 {
-  color:darkgoldenrod;
+  color:rgb(5, 201, 132)
+  ;
   margin: 0;
   text-transform: capitalize;
 }
 
 h1 {
-  color: rgb(227, 218, 189);
+  color: whitesmoke;
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 18px;
 }
 
 p {
-  color: rgb(227, 218, 189);
+  color: whitesmoke;
   font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.user-section {
+  margin-top: 33vh;
+}
+
+.mainNav {
+  background: black;
+  width: 100%;
+  padding: 10px 80px;
+}
+
+#logo {
+  padding: 10px 80px;
 }
 
 footer {
-  background:rgb(126, 77, 24);
+  background:black;
+  height: 100px;
+  position: fixed;
   padding: 30px 80px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
 }
 
 span {
-  color: rgb(140, 206, 246);
+  color: rgb(0,255,255);
 }
 
 .epi-viewer {
@@ -49,14 +96,14 @@ span {
 }
 
 .episode {
-  color: rgb(206, 108, 2);
+  color: whitesmoke;
   margin-bottom: 24px;
-  border-left: 1px solid rgb(227, 218, 189);
+  border-left: 1px solid whitesmoke;
   padding-left: 8px;
 }
 
 a {
-  color: rgb(227, 218, 189);
+  color: whitesmoke;
   text-decoration: none;
 }
 
@@ -107,13 +154,13 @@ a {
 
 button {
   padding: 4px 8px;
-  background: rgb(227, 218, 189);
+  background:whitesmoke;
   margin-right: 16px;
 }
 
 
 .list_title {
-  color: rgb(227, 218, 189);
+  color: rgb(43, 90, 110);
   margin-bottom: 12px;
 }
 
@@ -125,7 +172,7 @@ button {
 
 .episodeCreator {
   padding: 20px 40px;
-  background: rgba(227, 218, 189, .75);
+  background: whitesmoke;
   margin: 16px 0;
 }
 
@@ -160,4 +207,29 @@ button {
 
 .login {
   margin: 30px 80px;
+}
+
+#episodes {
+  background: rgb(3, 116, 116);
+  position: sticky;
+  top: 33vh;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  min-height: 67vh;
+}
+
+#contributors {
+  background: seagreen;
+  position: sticky;
+  top: 33vh;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  min-height: 67vh;
+  padding: 30px 80px;
+}
+
+.mainNav {
+  color: rgb(227, 218, 189);
 }

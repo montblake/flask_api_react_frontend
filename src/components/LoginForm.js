@@ -25,8 +25,7 @@ function LoginForm(props){
           }));
       }
 
-      function showRegistrationForm(){
-          props.setShowRegistration(true);
+      function handleCancel(){
           props.setShowLogin(false);
       }
     
@@ -57,8 +56,8 @@ function LoginForm(props){
                     id="remember"
                 />
                 <input type="submit" value="submit information"/>
+                <button onClick={handleCancel}>Cancel</button>
             </form>
-            <button onClick={showRegistrationForm}>Need to register for the app?</button>
         </div> 
     )
 }

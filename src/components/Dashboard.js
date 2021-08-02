@@ -16,7 +16,6 @@ function Dashboard(props) {
 
     return (
         <div>
-            <h2>Dashboard</h2>
             { props.currentUser ? 
             <nav>
                 <span>Hello, {props.currentUser}</span>
@@ -28,7 +27,7 @@ function Dashboard(props) {
 				<button onClick={handleLogin}>Login</button>
 				<button onClick={handleRegistration}>Register</button>
 			</nav>
-        }
+            }
         </div>
     );
 }
