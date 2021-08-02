@@ -7,8 +7,8 @@ import RegistrationForm from './components/RegistrationForm';
 
 
 function App() {
-  const URL="http://localhost:5000/";
-  // const URL="https://flask-detective-api-backend.herokuapp.com/";
+  // const URL="http://localhost:5000/";
+  const URL="https://flask-detective-api-backend.herokuapp.com/";
 
 
   const [episodes, setEpisodes] = useState([]);
