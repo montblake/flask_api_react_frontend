@@ -28,9 +28,10 @@ function RegistrationForm(props){
 
 
     return(
-        <div className="login">
-            <h2>Register</h2>
+        <main className="login">
+           <section>
             <form onSubmit={handleSubmit} className="episodeForm">
+            <h2>Register</h2>
                 <input 
                     type="text" 
                     name="username" 
@@ -62,7 +63,8 @@ function RegistrationForm(props){
                 <input type="submit" value="Submit Registration"/>
                 <button onClick={handleCancel}>Cancel</button>
             </form>
-        </div>
+            </section> 
+        </main>
     )
 }
 

@@ -38,7 +38,7 @@ function Episodes(props){
 				:
 				<></>
 				}
-				<h2>Episodes</h2>
+				<h2>Episodes ({ props.episodes ? props.episodes.length : "?"})</h2>
 				{ props.episodes  ? renderEpisodes() : "Loading..." }
 			</section>  
         </main>

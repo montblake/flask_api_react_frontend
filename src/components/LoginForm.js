@@ -30,38 +30,40 @@ function LoginForm(props){
       }
     
     return (
-        <div className="login">
-            <h2>Login</h2>
-            <form onSubmit={handleSubmit} className="episodeForm">
-                <input 
-                    onChange={handleChange}
-                    type="text" 
-                    name="username" 
-                    placeholder="Your name here." 
-                    value={loginForm.username}
-                />
-                <input
-                    type="password"
-                    name="password" 
-                    placeholder="password"
-                    onChange={handleChange}
-                    value={loginForm.password}
-                />
-                <fieldset>
-                    <label htmlFor="remember">Remember Me</label>
-                    <input
-                        type="checkbox"
-                        name="remember_me" 
-                        onChange={handleCheckbox}
-                        value={loginForm.remember_me}
-                        id="remember"
+        <main className="login">
+            <section>
+                <h2>Login</h2>
+                <form onSubmit={handleSubmit} className="episodeForm">
+                    <input 
+                        onChange={handleChange}
+                        type="text" 
+                        name="username" 
+                        placeholder="Your name here." 
+                        value={loginForm.username}
                     />
-                </fieldset>
-            
-                <input type="submit" value="submit information"/>
-                <button onClick={handleCancel}>Cancel</button>
-            </form>
-        </div> 
+                    <input
+                        type="password"
+                        name="password" 
+                        placeholder="password"
+                        onChange={handleChange}
+                        value={loginForm.password}
+                    />
+                    <fieldset>
+                        <label htmlFor="remember">Remember Me</label>
+                        <input
+                            type="checkbox"
+                            name="remember_me" 
+                            onChange={handleCheckbox}
+                            value={loginForm.remember_me}
+                            id="remember"
+                        />
+                    </fieldset>
+                
+                    <input type="submit" value="submit information"/>
+                    <button onClick={handleCancel}>Cancel</button>
+                </form>
+            </section>
+        </main> 
     )
 }
 

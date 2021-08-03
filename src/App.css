@@ -13,14 +13,16 @@
 }
 
 body {
-  background: black;
   font-family: 'JetBrains Mono', monospace;
+  background: black;
+  height: 200vh;  
 }
 
 #bgImage {
+  background: black;
   background-image: url(https://flask-detective-react-frontend.herokuapp.com/images/image1.jpg);
   background-image: url(https://flask-detective-react-frontend.herokuapp.com/images/image2.jpg);
-  /* background-image: url(https://flask-detective-react-frontend.herokuapp.com/images/image3.jpg); */
+  background-image: url(https://flask-detective-react-frontend.herokuapp.com/images/image3.jpg);
   background-size: cover;
   background-position: 0 bottom;
   background-repeat: no-repeat;
@@ -29,6 +31,7 @@ body {
   position: fixed;
   top: 0; left: 0;
   padding: 10px 0;
+  z-index:60;
 }
 
 .header-container {
@@ -48,13 +51,17 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  position: relative;
+  z-index: 75;
 }
 
 .dashboard > nav > ul {
   display: flex;
-  width: 300px;
+  flex-wrap: wrap;
+  width: 400px;
   justify-content: flex-end;
-
+  position: relative;
+  z-index: 75;
 }
 
 .dashboard > nav > ul > li {
@@ -64,7 +71,6 @@ body {
 
 
 .login {
-  padding: 0 80px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -72,40 +78,52 @@ body {
   position: fixed;
   top: 20vh;
   width: 100%;
-  height: 70vh;
+  height: 71vh;
   background: whitesmoke;
-  z-index: 1;
+  z-index: 55;
 }
 
 #home {
-  background: rgba(0, 138, 138, .25);
-  min-height: 100vh;
+  background: rgb(8,35,34);
+  min-height: 200vh;
   position: absolute;
   top: 25vh;
   left: 0;
   width: 100%;
-  z-index: -1;
+  z-index: 50;
 }
 
 #episodes {
-  background: seagreen;
-  min-height: 125vh;
+  background: rgb(8,35,34);
+  min-height: 200vh;
   position: absolute;
   top: 25vh;
   left: 0;
   width: 100%;
-  z-index: -1;
+  z-index: 50;
 }
 
 #contributors {
-  background: rgba(0, 138, 138, .25);;
-  min-height: 125vh;
+  background: rgb(8,35,34);
+  min-height: 200vh;
   position: absolute;
   top: 25vh;
   left: 0;
   width: 100%;
-  z-index: -1;
+  z-index: 50;
+
 }
+
+#characters {
+  background: rgb(8,35,34);
+  position: absolute;
+  top: 25vh;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  min-height: 100vh;
+}
+
 
 main {
   padding: 80px 0;
@@ -138,7 +156,8 @@ h3 {
 }
 
 h4 {
-  color: rgb(8,35,34);
+  color: darkcyan;
+  font-size: 16px;
 }
 
 h5 {
@@ -163,38 +182,43 @@ p {
   text-transform: capitalize;
 }
 
-/* #logo {
-  padding: 10px 80px;
-} */
 
 footer {
   background:black;
   position: fixed;
-  padding: 20px 80px;
+  padding: 20px 0;
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 100;  
 }
 
 footer > p {
-  margin: 0;
+  margin: 0 auto;
+  font-size: 12px;
 }
 
-span {
-  color: darkcyan;
+.footer-container {
+  max-width: 800px;
+  width: 66%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+
 }
+
 
 .epi-viewer {
   padding: 20px 80px;
 }
 
-/* .episode {
+.episode {
   color: whitesmoke;
   margin-bottom: 24px;
   border-left: 1px solid whitesmoke;
   padding-left: 8px;
-} */
+}
 
 a {
   color: whitesmoke;
@@ -208,16 +232,6 @@ a {
 .episode_link:hover {
   cursor: pointer;
 }
-
-/* .episode_link span {
-  text-transform: none;
-  font-style: italic;
-  margin-left: 8px;
-} */
-
-/* .episode_link > h4 {
-  display: inline;
-} */
 
 .episode_full {
   background: whitesmoke;
@@ -266,6 +280,7 @@ button:last-child {
   padding: 4px;
   background: whitesmoke;
   margin-bottom: 8px;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 .episodeForm > input:focus {
@@ -286,6 +301,7 @@ button:last-child {
   padding: 4px;
   resize: vertical;
   background: whitesmoke;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 .episodeForm > fieldset {
@@ -315,6 +331,7 @@ button:last-child {
 .episodeForm {
   width: 100%;
 }
+
 
 .plot {
   color: black;
@@ -349,9 +366,39 @@ li.greet {
 }
 
 .toggle-content {
-  opacity: 0;
+  display: none;
+  z-index: 0;
 }
 
 .toggle-content.is-visible {
-  opacity: 1;
+  display: block;
+  z-index: 50;
+}
+
+.portrait > img {
+  height: 200px;
+  width: auto;
+}
+
+.portrait {
+  width: 140px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid whitesmoke;
+  margin: 10px 0;
+}
+
+.portrait-gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  margin: 0 auto;
+  width: 66%;
+  max-width: 800px;
+  
 }

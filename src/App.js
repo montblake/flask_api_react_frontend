@@ -7,6 +7,7 @@ import Episodes from './components/Episodes'
 import RegistrationForm from './components/RegistrationForm';
 import Home from './components/Home';
 import Writers from './components/Writers';
+import Characters from './components/Characters';
 
 function App() {
 	// const URL="http://localhost:5000/";
@@ -78,7 +79,7 @@ function App() {
 	  getCurrentUser();
   }, [])
 
-  
+
   return (
   <div className="App">
     <Header 
@@ -117,8 +118,10 @@ function App() {
 		}
 	</div>
 	<Home />
+	<Characters />
 	<Episodes currentUser={currentUser} setCurrentUser={setCurrentUser} episodes={episodes} getEpisodes={getEpisodes} URL={URL} />
 	<Writers currentUser={currentUser} setCurrentUser={setCurrentUser} URL={URL} />
+	<div id="fixed-back"></div>
 	<Footer />
 
   </div>
