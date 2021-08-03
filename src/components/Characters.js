@@ -11,28 +11,28 @@ function Characters(){
         </section>
         <section className="portrait-gallery">
             <div className="portrait">
-                <img src="http://localhost:3000/images/strand_of_silk_-_stylish_thoughts_-_bollywood_actors_who_have_suited_up_-_cover.jpeg" alt="Django?"/>
+                <img src="https://flask-detective-react-frontend.herokuapp.com/images/strand_of_silk_-_stylish_thoughts_-_bollywood_actors_who_have_suited_up_-_cover.jpeg" alt="Django?"/>
             </div>
             <div className="portrait">
-                <img src="http://localhost:3000/images/steven-aguilar-AXkRhn-vyeA-unsplash.jpg" alt="Flask?"/>
+                <img src="https://flask-detective-react-frontend.herokuapp.com/images/steven-aguilar-AXkRhn-vyeA-unsplash.jpg" alt="Flask?"/>
             </div> 
             <div className="portrait">
-                <img src="http://localhost:3000/images/t-kaiser-kT7TntUK8eI-unsplash.jpg" alt="Django?"/>
+                <img src="https://flask-detective-react-frontend.herokuapp.com/images/t-kaiser-kT7TntUK8eI-unsplash.jpg" alt="Django?"/>
             </div>
             <div className="portrait">
-                <img src="http://localhost:3000/images/julie-fernandes-X0coaIM5FBs-unsplash.jpg" alt="Flask?"/>
+                <img src="https://flask-detective-react-frontend.herokuapp.com/images/julie-fernandes-X0coaIM5FBs-unsplash.jpg" alt="Flask?"/>
             </div>
             <div className="portrait">
-                <img src="http://localhost:3000/images/gwen1-1600x1082.jpeg" alt="Django?"/>
+                <img src="https://flask-detective-react-frontend.herokuapp.com/images/gwen1-1600x1082.jpeg" alt="Django?"/>
             </div>
             <div className="portrait">
-                <img src="http://localhost:3000/images/nihar-gogoi-9ntBvjJ6lkE-unsplash.jpg" alt="Flask?"/>
+                <img src="https://flask-detective-react-frontend.herokuapp.com/images/nihar-gogoi-9ntBvjJ6lkE-unsplash.jpg" alt="Flask?"/>
             </div>
             <div className="portrait">
-                <img src="http://localhost:3000/images/mohammad-metri-U1ytD7WJvy0-unsplash.jpg" alt="Django?"/>
+                <img src="https://flask-detective-react-frontend.herokuapp.com/images/mohammad-metri-U1ytD7WJvy0-unsplash.jpg" alt="Django?"/>
             </div>
             <div className="portrait">
-                <img src="http://localhost:3000/images/abdulla-m-q8PIuIjyq2Q-unsplash.jpg" alt="Flask?"/>
+                <img src="https://flask-detective-react-frontend.herokuapp.com/images/abdulla-m-q8PIuIjyq2Q-unsplash.jpg" alt="Flask?"/>
             </div>
         </section>
         
