@@ -10,9 +10,9 @@ body {
 }
 
 header {
-  background-image: url('http://localhost:3000/images/alexandre-debieve-kjmf-eRkl2A-unsplash.jpg');
-  background-image: url('http://localhost:3000/images/sebastian-pociecha-M8NSkgzPMLY-unsplash.jpg');
-  /* background-image: url('http://localhost:3000/images/sebastian-pociecha-kGjbCVsHRbg-unsplash.jpg'); */
+  background-image: url('https://flask-detective-react-frontend.herokuapp.com/images/alexandre-debieve-kjmf-eRkl2A-unsplash.jpg');
+  background-image: url('https://flask-detective-react-frontend.herokuapp.com/sebastian-pociecha-M8NSkgzPMLY-unsplash.jpg');
+  /* background-image: url('https://flask-detective-react-frontend.herokuapp.com/sebastian-pociecha-kGjbCVsHRbg-unsplash.jpg'); */
   background-size: cover;
   background-position: 0 0;
   background-repeat: no-repeat;
