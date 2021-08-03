@@ -7,11 +7,10 @@ import Episodes from './components/Episodes'
 import RegistrationForm from './components/RegistrationForm';
 import Home from './components/Home';
 import Writers from './components/Writers';
-import Dashboard from './components/Dashboard';
 
 function App() {
 	// const URL="http://localhost:5000/";
-  	const URL="https://flask-detective-api-backend.herokuapp.com/";
+  	const URL="https://new-flask-backend-detectives.herokuapp.com/";
 
   
 	const [ currentUser, setCurrentUser] = useState({username: "", user_id: null});
