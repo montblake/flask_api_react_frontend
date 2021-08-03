@@ -10,8 +10,8 @@ import Writers from './components/Writers';
 import Dashboard from './components/Dashboard';
 
 function App() {
-	const URL="http://localhost:5000/";
-  	// const URL="https://flask-detective-api-backend.herokuapp.com/";
+	// const URL="http://localhost:5000/";
+  	const URL="https://flask-detective-api-backend.herokuapp.com/";
 
   
 	const [ currentUser, setCurrentUser] = useState({username: "", user_id: null});
