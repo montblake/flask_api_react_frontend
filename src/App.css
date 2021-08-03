@@ -19,8 +19,8 @@ body {
 
 #bgImage {
   background-image: url(https://flask-detective-react-frontend.herokuapp.com/images/image1.jpg);
-  /* background-image: url(https://flask-detective-react-frontend.herokuapp.com/images/image2.jpg);
-  background-image: url(https://flask-detective-react-frontend.herokuapp.com/images/image3.jpg); */
+  background-image: url(https://flask-detective-react-frontend.herokuapp.com/images/image2.jpg);
+  /* background-image: url(https://flask-detective-react-frontend.herokuapp.com/images/image3.jpg); */
   background-size: cover;
   background-position: 0 bottom;
   background-repeat: no-repeat;
@@ -79,16 +79,32 @@ body {
 
 #home {
   background: rgba(0, 138, 138, .25);
-  margin-top: 25vh;
+  min-height: 100vh;
+  position: absolute;
+  top: 25vh;
+  left: 0;
+  width: 100%;
+  z-index: -1;
 }
 
 #episodes {
   background: seagreen;
+  min-height: 125vh;
+  position: absolute;
+  top: 25vh;
+  left: 0;
+  width: 100%;
+  z-index: -1;
 }
 
 #contributors {
   background: rgba(0, 138, 138, .25);;
-  padding: 30px 80px 120px 80px;
+  min-height: 125vh;
+  position: absolute;
+  top: 25vh;
+  left: 0;
+  width: 100%;
+  z-index: -1;
 }
 
 main {
@@ -330,4 +346,12 @@ li.greet {
 
 .list-p {
   margin-bottom: 1rem;
+}
+
+.toggle-content {
+  opacity: 0;
+}
+
+.toggle-content.is-visible {
+  opacity: 1;
 }

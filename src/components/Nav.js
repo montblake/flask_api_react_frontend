@@ -1,32 +1,39 @@
 function Nav(){
 
-    // function scrollToHome(){
-    //     window.scrollTo({
-    //         top: '0vh',
-    //         behavior: "smooth"
-    //     });
-    // }
+    const homeElem = document.getElementById('home');
+    const episodesElem = document.getElementById('episodes');
+    const contributorsElem = document.getElementById('contributors');
+    const bgElem = document.getElementById('bgImage');
 
-    // function scrollToEpisodes(){
-    //     window.scrollTo({
-    //         top: 1000,
-    //         behavior: "smooth"
-    //     });
-    // }
 
-    // function scrollToContributors(){
-    //     window.scrollTo({
-    //         top: 2000,
-    //         behavior: "smooth"
-    //     });
-    // }
+    function showHome() {
+        homeElem.classList.add('is-visible');
+        episodesElem.classList.remove('is-visible');
+        contributorsElem.classList.remove('is-visible');
+        bgElem.style.backgroundImage = "url(https://flask-detective-react-frontend.herokuapp.com/images/image1.jpg)"
+    }
+
+    function showEps() {
+        homeElem.classList.remove('is-visible');
+        episodesElem.classList.add('is-visible');
+        contributorsElem.classList.remove('is-visible');
+        bgElem.style.backgroundImage = "url(https://flask-detective-react-frontend.herokuapp.com/images/image2.jpg)"
+    }
+
+    function showConts() {
+        homeElem.classList.remove('is-visible');
+        episodesElem.classList.remove('is-visible');
+        contributorsElem.classList.add('is-visible');
+        bgElem.style.backgroundImage = "url(https://flask-detective-react-frontend.herokuapp.com/images/image3.jpg)"
+    }
+
 
     return (
         <nav className="mainNav">
             <ul>
-                <li>home</li>
-                <li>episodes</li>
-                <li>contributors</li>
+                <li onClick={showHome}>home</li>
+                <li onClick={showEps}>episodes</li>
+                <li onClick={showConts}>contributors</li>
             </ul>
          
 			 

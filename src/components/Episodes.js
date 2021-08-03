@@ -31,7 +31,7 @@ function Episodes(props){
 	  
 
 	  return (
-	  	<main id="episodes">
+	  	<main id="episodes" className="toggle-content">
 			<section>
 				{ props.currentUser.username ? 
 				<EpisodeForm currentUser={props.currentUser} createEpisode={createEpisode} />

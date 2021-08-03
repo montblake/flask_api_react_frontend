@@ -24,7 +24,7 @@ function Writers(props) {
     }, []);
 
     return (
-        <main id="contributors">
+        <main id="contributors" className="toggle-content">
             <section>
                 <h2>Contributing Writers</h2>
                 <ul>
