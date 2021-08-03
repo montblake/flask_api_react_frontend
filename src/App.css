@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'JetBrains Mono', monospace;
+  src: url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+  font-weight: 100 800;
+  italic: 0 1;
+}
+
 *, *:before, *:after {
   margin: 0;
   list-style: none;
@@ -7,12 +14,13 @@
 
 body {
   background: black;
+  font-family: 'JetBrains Mono', monospace;
 }
 
-header {
-  background-image: url('https://flask-detective-react-frontend.herokuapp.com/images/alexandre-debieve-kjmf-eRkl2A-unsplash.jpg');
-  /* background-image: url('https://flask-detective-react-frontend.herokuapp.com/images/sebastian-pociecha-M8NSkgzPMLY-unsplash.jpg');
-  background-image: url('https://flask-detective-react-frontend.herokuapp.com/images/sebastian-pociecha-kGjbCVsHRbg-unsplash.jpg'); */
+#bgImage {
+  background-image: url(https://flask-detective-react-frontend.herokuapp.com/images/image1.jpg);
+  /* background-image: url(https://flask-detective-react-frontend.herokuapp.com/images/image2.jpg);
+  background-image: url(https://flask-detective-react-frontend.herokuapp.com/images/image3.jpg); */
   background-size: cover;
   background-position: 0 bottom;
   background-repeat: no-repeat;
@@ -105,14 +113,27 @@ h1 {
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 1.5rem;
   margin-bottom: 4px;
+}
+
+h3 {
+  color: rgb(8,35,34);
+}
+
+h4 {
+  color: rgb(8,35,34);
+}
+
+h5 {
+  color: whitesmoke;
 }
 
 p {
   color: whitesmoke;
   font-size: 14px;
-  margin-bottom: 24px;
+  margin-bottom: 3rem;
+  line-height: 1.5rem;
 }
 
 .mainNav {
@@ -152,12 +173,12 @@ span {
   padding: 20px 80px;
 }
 
-.episode {
+/* .episode {
   color: whitesmoke;
   margin-bottom: 24px;
   border-left: 1px solid whitesmoke;
   padding-left: 8px;
-}
+} */
 
 a {
   color: whitesmoke;
@@ -166,22 +187,21 @@ a {
 
 .episode_link {
   text-transform: capitalize;
-  margin-bottom: 8px;
 }
 
 .episode_link:hover {
   cursor: pointer;
 }
 
-.episode_link span {
+/* .episode_link span {
   text-transform: none;
   font-style: italic;
   margin-left: 8px;
-}
+} */
 
-.episode_link > h4 {
+/* .episode_link > h4 {
   display: inline;
-}
+} */
 
 .episode_full {
   background: whitesmoke;
@@ -189,8 +209,7 @@ a {
   margin: 16px 0;
 }
 
-.episode_full > h4, h5 {
-  color: darkcyan;
+.episode_full > h4 {
   font-size: 24px;
 }
 
@@ -267,15 +286,15 @@ button:last-child {
   font-size: 14px;
 }
 
-
-
-.dashboard {
+.dashboard ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-
+.dashboard > nav > ul {
+  width: 400px;
+}
 
 .episodeForm {
   width: 100%;
@@ -290,14 +309,25 @@ li.dash {
   background: whitesmoke;
   padding: 4px 12px;
   border-radius: 12px;
+  font-size:12px;
 }
 
 li.greet {
-  color: whitesmoke;
+  color:whitesmoke;
   text-transform: capitalize;
+  font-weight: 700;
+  text-shadow: 0 0 2px black;
   margin-top: 4px;
 }
 
 .writers-li {
   color: whitesmoke;
+}
+
+.main-section-title {
+  margin-bottom: 2rem;
+}
+
+.list-p {
+  margin-bottom: 1rem;
 }

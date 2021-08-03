@@ -4,7 +4,7 @@ import Dashboard from './Dashboard';
 
 function Header(props){
     return (
-        <header>
+        <header id="bgImage">
             <div className="header-container">
                 <section className="nav-section">
                     

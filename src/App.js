@@ -17,6 +17,7 @@ function App() {
 	const [ showLogin, setShowLogin] = useState(false);
 	const [ showRegistration, setShowRegistration] = useState(false);
 	const [episodes, setEpisodes] = useState(null);
+	
 
 	async function getEpisodes() {
 		const response = await fetch(URL + 'episodes')
@@ -77,7 +78,7 @@ function App() {
 	  getCurrentUser();
   }, [])
 
-
+  
   return (
   <div className="App">
     <Header 
