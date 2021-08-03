@@ -29,7 +29,7 @@ function RegistrationForm(props){
 
     return(
         <div className="login">
-            <h2 className="contribute_title">Register</h2>
+            <h2>Register</h2>
             <form onSubmit={handleSubmit} className="episodeForm">
                 <input 
                     type="text" 

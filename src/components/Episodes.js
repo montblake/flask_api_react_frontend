@@ -32,12 +32,12 @@ function Episodes(props){
 
 	  return (
 	  	<main id="episodes">
-            <h2 className="list_title">Episodes</h2>
             { props.currentUser.username ? 
             <EpisodeForm currentUser={props.currentUser} createEpisode={createEpisode} />
             :
             <></>
             }
+			<h2>Episodes</h2>
             { props.episodes  ? renderEpisodes() : "Loading..." }
         </main>
     )

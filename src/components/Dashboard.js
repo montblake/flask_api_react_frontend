@@ -9,23 +9,32 @@ function Dashboard(props) {
         props.logout();
     }
 
+    function handleEdit(){
+        console.log("Editing Profile");
+    }
+
     function handleRegistration(){
         props.setShowRegistration(true);
         props.setShowLogin(false);
     }
 
     return (
-        <div>
-            { props.currentUser ? 
+        <div className="dashboard">
+            { props.username ? 
             <nav>
-                <span>Hello, {props.currentUser}</span>
-                <button>Edit Profile</button>
-                <button onClick={handleLogout}>Logout</button>
+                <ul>
+                    <li className="greet">Hello, {props.username}</li>
+                    <li onClick={handleEdit} className="dash">Edit Profile</li>
+                    <li onClick={handleLogout} className="dash">Logout</li>
+                </ul>
+                
             </nav>
             :
             <nav>
-				<button onClick={handleLogin}>Login</button>
-				<button onClick={handleRegistration}>Register</button>
+                <ul>
+                    <li onClick={handleLogin} className="dash">Login</li>
+                    <li onClick={handleRegistration} className="dash">Register</li>
+                </ul>
 			</nav>
             }
         </div>

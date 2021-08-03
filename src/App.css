@@ -16,23 +16,19 @@ header {
   background-size: cover;
   background-position: 0 0;
   background-repeat: no-repeat;
-  height: 33vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  position:fixed;
-  top: 0; left: 0;
+  height: 25vh;
   width: 100%;
-  z-index: 10;
+  position: fixed;
+  top: 0; left: 0;
 }
 
 #home {
-  position: sticky;
-  top: 33vh; left: 0;
-  width: 100%;
-  min-height: 100vh;
-  background: darkcyan;
+  background: rgba(0, 138, 138, .25);
+  margin-top: 20vh;
 }
 
 main {
@@ -41,19 +37,19 @@ main {
 }
 
 h2, h3, h4, h5, h6 {
-  color:rgb(5, 201, 132)
-  ;
-  margin: 0;
+  color:limegreen;
   text-transform: capitalize;
 }
 
 h1 {
   color: whitesmoke;
   font-size: 48px;
+  text-shadow: 0 0 8px darkorange;
 }
 
 h2 {
   font-size: 18px;
+  margin-bottom: 4px;
 }
 
 p {
@@ -62,14 +58,13 @@ p {
   margin-bottom: 24px;
 }
 
-.user-section {
-  margin-top: 33vh;
-}
-
 .mainNav {
-  background: black;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   width: 100%;
-  padding: 10px 80px;
+  color: lime;
+  text-transform: capitalize;
 }
 
 #logo {
@@ -78,17 +73,20 @@ p {
 
 footer {
   background:black;
-  height: 100px;
   position: fixed;
-  padding: 30px 80px;
+  padding: 20px 80px;
   bottom: 0;
   left: 0;
   width: 100%;
   z-index: 100;
 }
 
+footer > p {
+  margin: 0;
+}
+
 span {
-  color: rgb(0,255,255);
+  color: darkcyan;
 }
 
 .epi-viewer {
@@ -127,18 +125,18 @@ a {
 }
 
 .episode_full {
-  background: rgba(227, 218, 189, .5);
+  background: whitesmoke;
   padding: 24px;
   margin: 16px 0;
 }
 
 .episode_full > h4, h5 {
-  color: rgb(126, 77, 24);
+  color: darkcyan;
   font-size: 24px;
 }
 
 .episode_full > h5 {
-  color: rgb(126, 77, 24);
+  color: seagreen;
   font-size: 14px;
   font-style: italic;
   margin-bottom: 12px;
@@ -148,32 +146,20 @@ a {
   margin: 0 0 24px 0;
 }
 
-.user_controls {
-  margin: 24px 0 0 0;
-}
-
 button {
   padding: 4px 8px;
   background:whitesmoke;
   margin-right: 16px;
 }
 
-
-.list_title {
-  color: rgb(43, 90, 110);
-  margin-bottom: 12px;
-}
-
-.main_title,
-.list_title,
-.contribute_title {
-  margin-bottom: 12px;
+button:last-child {
+  margin-right: 0;
 }
 
 .episodeCreator {
   padding: 20px 40px;
   background: whitesmoke;
-  margin: 16px 0;
+  margin: 0 0 16px 0;
 }
 
 .episodeCreator h5 {
@@ -184,13 +170,20 @@ button {
 .episodeForm > input {
   width: 100%;
   padding: 4px;
-  background: rgb(227, 218, 189);
+  background: whitesmoke;
+  margin-bottom: 8px;
+}
+
+.episodeForm > input:focus {
+  background: whitesmoke;
+  width: 100%;
 }
 
 .episodeForm > input[type="submit"] {
-  width: 25%;
-  margin: 12px 0;
-  background: rgb(227, 218, 189);
+  display: inline-block;
+  margin-right: 16px;
+  background: whitesmoke;
+  width: 100%;
 }
 
 .episodeForm > textarea {
@@ -198,38 +191,87 @@ button {
   min-height: 160px;
   padding: 4px;
   resize: vertical;
-  background: rgb(227, 218, 189);
+  background: whitesmoke;
 }
 
-.guest-invitation p {
-  color: rgb(206, 108, 2);
+.episodeForm > fieldset {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 8px;
+  border: none;
 }
 
-.login {
-  margin: 30px 80px;
+.episodeForm > fieldset > label {
+  margin-right: 12px;
+  font-size: 14px;
 }
 
 #episodes {
-  background: rgb(3, 116, 116);
-  position: sticky;
-  top: 33vh;
-  left: 0;
-  width: 100%;
-  z-index: 3;
-  min-height: 67vh;
+  background: darkcyan;
 }
 
 #contributors {
   background: seagreen;
-  position: sticky;
-  top: 33vh;
-  left: 0;
-  width: 100%;
-  z-index: 5;
-  min-height: 67vh;
-  padding: 30px 80px;
+  padding: 30px 80px 120px 80px;
 }
 
-.mainNav {
-  color: rgb(227, 218, 189);
+.dashboard {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 80px;
+}
+
+.dashboard > nav > ul {
+  display: flex;
+  width: 300px;
+  justify-content: flex-end;
+
+}
+
+.dashboard > nav > ul > li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+
+.login {
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: fixed;
+  top: 20vh;
+  width: 100%;
+  height: 70vh;
+  background: whitesmoke;
+  z-index: 1;
+}
+
+.episodeForm {
+  width: 100%;
+}
+
+.plot {
+  color: black;
+}
+
+li.dash {
+  color: darkorange;
+}
+
+li.greet {
+  color: whitesmoke;
+  text-transform: capitalize;
 }

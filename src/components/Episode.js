@@ -15,7 +15,7 @@ function Episode(props) {
                 <button onClick={handleClick} className="episode_closer">CLOSE</button>
                 <h4>{props.title}</h4>
                 <h5>written by {props.writer}</h5>
-                <p>{props.plot}</p>
+                <p className="plot">{props.plot}</p>
                 { props.currentUser.username === props.writer ?<UserControls episode_id={props.episode_id} deleteEpisode={props.deleteEpisode}/> : "" }
                     
             </div>
@@ -25,7 +25,7 @@ function Episode(props) {
     function listEp() {
         return (
             <div key={props.episode_id} className="episode_link">
-              <h4 onClick={handleClick}>{props.title}</h4><span>written by {props.writer}</span>
+              <h3 onClick={handleClick}>{props.title}</h3><p>written by {props.writer}</p>
             </div>
           )
     }

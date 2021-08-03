@@ -7,6 +7,7 @@ import Episodes from './components/Episodes'
 import RegistrationForm from './components/RegistrationForm';
 import Home from './components/Home';
 import Writers from './components/Writers';
+import Dashboard from './components/Dashboard';
 
 function App() {
 	const URL="http://localhost:5000/";
@@ -70,38 +71,35 @@ function App() {
 	  const data = await response.json();
 	  console.log(data);
   }
-
-  
-  
+ 
 
   useEffect(() => {
 	  getEpisodes();
 	  getCurrentUser();
-
   }, [])
 
 
   return (
   <div className="App">
     <Header 
-    	currentUser={currentUser.username} 
-		user_id={currentUser.id} 
+    	username={currentUser.username} 
+		user_id={currentUser.user_id} 
 		showLogin={showLogin} 
 		setShowLogin={setShowLogin} 
 		showRegistration={showRegistration} 
 		setShowRegistration={setShowRegistration} 
-		register={register} 
-		login={login} 
-		logout={logout} />
+	/>
+
 	<div className="user-section">
-		{ showRegistration ?
+	{ showRegistration ?
 			<RegistrationForm
+
 				showLogin={showLogin} 
 				setShowLogin={setShowLogin} 
 				showRegistration={showRegistration} 
 				setShowRegistration={setShowRegistration} 
 				register={register} 
-		/>
+			/>
 		:
 		<></>
 		}
@@ -117,10 +115,8 @@ function App() {
 			<></>
 		}
 	</div>
-
 	<Home />
-    <Episodes currentUser={currentUser} setCurrentUser={setCurrentUser} episodes={episodes} getEpisodes={getEpisodes} URL={URL} />
-	{ console.log("episodes:", episodes)}
+	<Episodes currentUser={currentUser} setCurrentUser={setCurrentUser} episodes={episodes} getEpisodes={getEpisodes} URL={URL} />
 	<Writers currentUser={currentUser} setCurrentUser={setCurrentUser} URL={URL} />
 	<Footer />
 

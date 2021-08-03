@@ -31,7 +31,7 @@ function LoginForm(props){
     
     return (
         <div className="login">
-            <h2 className="contribute_title">Login</h2>
+            <h2>Login</h2>
             <form onSubmit={handleSubmit} className="episodeForm">
                 <input 
                     onChange={handleChange}
@@ -47,14 +47,17 @@ function LoginForm(props){
                     onChange={handleChange}
                     value={loginForm.password}
                 />
-                <label htmlFor="remember">Remember Me</label>
-                <input
-                    type="checkbox"
-                    name="remember_me" 
-                    onChange={handleCheckbox}
-                    value={loginForm.remember_me}
-                    id="remember"
-                />
+                <fieldset>
+                    <label htmlFor="remember">Remember Me</label>
+                    <input
+                        type="checkbox"
+                        name="remember_me" 
+                        onChange={handleCheckbox}
+                        value={loginForm.remember_me}
+                        id="remember"
+                    />
+                </fieldset>
+            
                 <input type="submit" value="submit information"/>
                 <button onClick={handleCancel}>Cancel</button>
             </form>
