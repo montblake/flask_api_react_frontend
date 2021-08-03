@@ -11,29 +11,86 @@ body {
 
 header {
   background-image: url('https://flask-detective-react-frontend.herokuapp.com/images/alexandre-debieve-kjmf-eRkl2A-unsplash.jpg');
-  background-image: url('https://flask-detective-react-frontend.herokuapp.com/sebastian-pociecha-M8NSkgzPMLY-unsplash.jpg');
-  /* background-image: url('https://flask-detective-react-frontend.herokuapp.com/sebastian-pociecha-kGjbCVsHRbg-unsplash.jpg'); */
+  /* background-image: url('https://flask-detective-react-frontend.herokuapp.com/images/sebastian-pociecha-M8NSkgzPMLY-unsplash.jpg');
+  background-image: url('https://flask-detective-react-frontend.herokuapp.com/images/sebastian-pociecha-kGjbCVsHRbg-unsplash.jpg'); */
   background-size: cover;
-  background-position: 0 0;
+  background-position: 0 bottom;
   background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
   height: 25vh;
   width: 100%;
   position: fixed;
   top: 0; left: 0;
+  padding: 10px 0;
+}
+
+.header-container {
+  width: 66%;
+  height: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.nav-section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.dashboard > nav > ul {
+  display: flex;
+  width: 300px;
+  justify-content: flex-end;
+
+}
+
+.dashboard > nav > ul > li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+
+.login {
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: fixed;
+  top: 20vh;
+  width: 100%;
+  height: 70vh;
+  background: whitesmoke;
+  z-index: 1;
 }
 
 #home {
   background: rgba(0, 138, 138, .25);
-  margin-top: 20vh;
+  margin-top: 25vh;
+}
+
+#episodes {
+  background: seagreen;
+}
+
+#contributors {
+  background: rgba(0, 138, 138, .25);;
+  padding: 30px 80px 120px 80px;
 }
 
 main {
-  background: black;
-  padding: 30px 80px;
+  padding: 80px 0;
+}
+
+main > section {
+  margin: 0 auto;
+  width: 66%;
+  max-width: 800px;
 }
 
 h2, h3, h4, h5, h6 {
@@ -43,8 +100,8 @@ h2, h3, h4, h5, h6 {
 
 h1 {
   color: whitesmoke;
-  font-size: 48px;
-  text-shadow: 0 0 8px darkorange;
+  font-size: 6vw;  
+  text-shadow: 0 0 8px black;
 }
 
 h2 {
@@ -64,12 +121,14 @@ p {
   align-items: center;
   width: 100%;
   color: lime;
+  font-weight: 700;
+  text-shadow: 0px 0px 4px black;
   text-transform: capitalize;
 }
 
-#logo {
+/* #logo {
   padding: 10px 80px;
-}
+} */
 
 footer {
   background:black;
@@ -208,14 +267,7 @@ button:last-child {
   font-size: 14px;
 }
 
-#episodes {
-  background: darkcyan;
-}
 
-#contributors {
-  background: seagreen;
-  padding: 30px 80px 120px 80px;
-}
 
 .dashboard {
   display: flex;
@@ -223,41 +275,7 @@ button:last-child {
   align-items: center;
 }
 
-.nav-section {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px 80px;
-}
 
-.dashboard > nav > ul {
-  display: flex;
-  width: 300px;
-  justify-content: flex-end;
-
-}
-
-.dashboard > nav > ul > li {
-  display: inline-block;
-  margin-left: 10px;
-}
-
-
-.login {
-  padding: 0 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  position: fixed;
-  top: 20vh;
-  width: 100%;
-  height: 70vh;
-  background: whitesmoke;
-  z-index: 1;
-}
 
 .episodeForm {
   width: 100%;
@@ -268,10 +286,18 @@ button:last-child {
 }
 
 li.dash {
-  color: darkorange;
+  color: black;
+  background: whitesmoke;
+  padding: 4px 12px;
+  border-radius: 12px;
 }
 
 li.greet {
   color: whitesmoke;
   text-transform: capitalize;
+  margin-top: 4px;
+}
+
+.writers-li {
+  color: whitesmoke;
 }

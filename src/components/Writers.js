@@ -15,7 +15,7 @@ function Writers(props) {
 
     function renderWriters() {
     console.log("I am rendering writers")
-        return writers.map(writer => <li key={writer.writer_id}>{writer.username}</li>)
+        return writers.map(writer => <li className="writers-li" key={writer.writer_id}>{writer.username}</li>)
     }
 
     
@@ -25,10 +25,12 @@ function Writers(props) {
 
     return (
         <main id="contributors">
-            <h2 className="list_title">Contributing Writers</h2>
-            <ul>
-                { writers ? renderWriters() : <></> }
-            </ul>
+            <section>
+                <h2>Contributing Writers</h2>
+                <ul>
+                    { writers ? renderWriters() : <></> }
+                </ul>
+            </section>
         </main>
     );
 }

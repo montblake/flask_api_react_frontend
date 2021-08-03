@@ -29,7 +29,7 @@ function EpisodeForm(props){
                     placeholder="This is the Title of the Episode" 
                     value={episodeForm.title}
                 />
-                <h5>Written by {props.currentUser.username}</h5>
+                {/* <h5>Written by {props.currentUser.username}</h5> */}
                 <textarea 
                     name="plot" 
                     placeholder="This is the placeholder plot ... Change it."

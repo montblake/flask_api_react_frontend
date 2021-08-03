@@ -32,13 +32,15 @@ function Episodes(props){
 
 	  return (
 	  	<main id="episodes">
-            { props.currentUser.username ? 
-            <EpisodeForm currentUser={props.currentUser} createEpisode={createEpisode} />
-            :
-            <></>
-            }
-			<h2>Episodes</h2>
-            { props.episodes  ? renderEpisodes() : "Loading..." }
+			<section>
+				{ props.currentUser.username ? 
+				<EpisodeForm currentUser={props.currentUser} createEpisode={createEpisode} />
+				:
+				<></>
+				}
+				<h2>Episodes</h2>
+				{ props.episodes  ? renderEpisodes() : "Loading..." }
+			</section>  
         </main>
     )
 }

@@ -87,6 +87,7 @@ function App() {
 		setShowLogin={setShowLogin} 
 		showRegistration={showRegistration} 
 		setShowRegistration={setShowRegistration} 
+		logout={logout}
 	/>
 
 	<div className="user-section">
