@@ -1,6 +1,7 @@
 function UserControls(props){
     function handleEdit() {
-        console.log(props.episode_id);
+        console.log("Get me the edit form!!!!");
+        props.setEditForm({displayForm: true});
     }
 
     async function handleDelete() {

@@ -22,10 +22,22 @@ function Episodes(props){
 		})
 		props.getEpisodes();
 	  }
+
+	  const updateEpisode = async (form, id) => {
+		  await fetch(props.URL + '/edit_episode/' + id + '/', {
+			  method: "POST",
+			  body: JSON.stringify(form),
+			  cache: "no-cache",
+			  headers: new Headers({
+				  "content-type": "application/json"
+			  })
+		  })
+		  props.getEpisodes();
+	  }
 	  
 	  const renderEpisodes = () => {
 		  return props.episodes.map(epi => (
-		  <Episode title={epi.title} plot={epi.plot} writer={epi.writer} episode_id={epi.episode_id} key={epi.episode_id} currentUser={props.currentUser} deleteEpisode={deleteEpisode}/>
+		  <Episode title={epi.title} plot={epi.plot} writer={epi.writer} episode_id={epi.episode_id} key={epi.episode_id} currentUser={props.currentUser} deleteEpisode={deleteEpisode} updateEpisode={updateEpisode} />
 		  ));
       }
 	  

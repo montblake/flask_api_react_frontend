@@ -9,6 +9,9 @@ function Characters(){
             <h2>Flask</h2>
             <p>Smaller than Django. Flask won't make many decisions for you.  Simple by nature but not simplistic. Flask can be everything you need and nothing you don't. Dat zijn ook makelaars in koffie, doch hun adres behoeft ge niet te weten. Ik pas er dus wel op, dat ik geen romans schrijf, of andere valse opgaven doe.</p>
         </section>
+        <section>
+            <h2>Who would you cast as Django and Flask?</h2>
+        </section>
         <section className="portrait-gallery">
             <div className="portrait">
                 <img src="https://flask-detective-react-frontend.herokuapp.com/images/strand_of_silk_-_stylish_thoughts_-_bollywood_actors_who_have_suited_up_-_cover.jpeg" alt="Django?"/>
