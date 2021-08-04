@@ -57,9 +57,9 @@ function Episode(props) {
 
     function listEp() {
         return (
-            <div key={props.episode_id} className="episode_link" >
-              <h4 onClick={handleClick}>{props.title}</h4>
-              <h5 className="list-p">written by {props.writer}</h5>
+            <div key={props.episode_id} >
+              <h4 onClick={handleClick} className="episode_link">{props.title}</h4>
+              <h5 className="list-writer">written by {props.writer}</h5>
             </div>
         )
     }

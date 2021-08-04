@@ -22,9 +22,10 @@ function Dashboard(props) {
         <div className="dashboard">
             { props.username ? 
             <nav>
+                
                 <ul>
                     <li className="greet">Hello, {props.username}</li>
-                    <li onClick={handleEdit} className="dash">Edit Profile</li>
+                    {/* <li onClick={handleEdit} className="dash">Edit Profile</li> */}
                     <li onClick={handleLogout} className="dash">Logout</li>
                 </ul>
                 
