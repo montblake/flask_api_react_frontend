@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+## Django and Flask
+---
+### Crowdsourced Detective Series
+---
+_Django and Flask_ is an imaginary television detective show, set in the Dutch capital of Amsterdam. Its two lead characters take their names from the two major web frameworks written in the Python programming language, originally created by Guido van Rossum.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Taking on the characteristics that uniquely indentify their related web-frameworks, Detectives Django and Flask make a unique pairing whose storylines offer special enjoyment to web developers and others who may delight in layered meta-commentary and self-referential symbolism.
 
-## Available Scripts
+Django and Flask will be crowdsourced and created through community. So sign up and start contributing episodes. Together, let's discover what this show can become.
 
-In the project directory, you can run:
+---
+### Web Development Project
+---
+_Django and Flask_ is a project conceived and developed by Chicago-based software engineer Blake Montgomery.
 
-### `yarn start`
+It utilizes:
+Python
+Flask
+HTML
+CSS
+Bootstrap
+JavaScript
+React 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+There are two versions of the app. The first is a simple backend Flask app serving up Jinja2 templates to the user. It incorporates WTForms to validate and secure communications with the server. It has a simple design made with Bootstrap and some hand-coded CSS. The second version uses a the FLASK backend to serve json data to a REACT frontend. The app does not use any frontend routing but juggles the various content views by shuffling, hiding, and revealing layers. The CSS for this second app is all hand-coded.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+BACKEND ONLY: https://server-only-dj-and-flask.herokuapp.com/
 
-### `yarn test`
+FLASK-API with REACT FRONTEND: https://flask-detective-react-frontend.herokuapp.com/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
+### PROCESS
+---
+![Project Wireframes](./readme-resources/wireframe_django_and_flask.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![flask ERD](./readme-resources/flaskERD.png)
 
-### `yarn eject`
+LINK TO TRELLO PLANNING BOARD:
+https://trello.com/b/DUkch4pm/djangoflask
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
+### CHALLENGES
+---
+Still in development on the React/Flask-Api app: full user CRUD to accompany the operations on the Episodes model.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Also, still trying to replicate all of the built in security features that were possible in the server-side app. Especially working on further understanding the mechanism behind CSRF protections.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
+### POSSIBILITIES
+---
+The idea of crowd-sourcing a television show seems more and more interesting (at least on a technical level) the longer I play with it. There is ample room to add features: a way to develop characters and not just storylines. A way to put individual episodes into playlists and propose seasons, story-arcs, etc. Maybe there are different versions of episode creation to explore: perhaps pictoral or more structured text. 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The one clear demand, as the app gains momentum, would be to find ways to segment the information. Following specific users offers a way to begin to filter results. Liking episodes is also a way for the community to set directions and allow a vision to emerge. 
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+There are technical hurdles but also imaginative, experience-guiding challenges to grapple with. And, the original inspiration remains to be achieved: a comparison of both Flask and Django and a deeper understanding of opinionated vs non-opinionated frameworks.
